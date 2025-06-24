@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavin Feuillerat - Business Development & Account Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            scroll-behavior: smooth;
+        }
+        :root {
+            --color-primary: #003f5c;
+            --color-secondary: #665191;
+            --color-accent1: #ff7c43;
+            --color-accent2: #ffa600;
+            --color-text-dark: #333;
+            --color-text-light: #f8f9fa;
+        }
+        .gradient-bg {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem; /* Space for the line and dot */
+            border-left: 3px solid rgba(0, 63, 92, 0.2); /* Light primary color */
+            margin-left: 10px; /* Offset to align with header */
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px; /* Adjust to perfectly center on the line */
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-accent1);
+            border-radius: 50%;
+            border: 3px solid var(--color-bg-light);
+            z-index: 10;
+        }
+        .timeline-item:last-child {
+            border-left: none; /* No line after the last item */
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 250px; /* Adjusted height for charts */
+            width: 100%;
+            max-width: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 gradient-bg shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-white text-2xl font-bold">Gavin F.</a>
+            <div class="space-x-4">
+                <a href="#about" class="text-white hover:text-gray-200">About</a>
+                <a href="#experience" class="text-white hover:text-gray-200">Experience</a>
+                <a href="#skills" class="text-white hover:text-gray-200">Skills</a>
+                <a href="#contact" class="text-white hover:text-gray-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="gradient-bg text-white py-24 md:py-32 text-center flex flex-col justify-center items-center min-h-screen">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                Gavin Feuillerat
+            </h1>
+            <p class="text-2xl md:text-3xl font-light mt-4">Business Development & Account Manager</p>
+            <p class="mt-8 max-w-2xl mx-auto text-lg md:text-xl">
+                Bilingual professional with over 6 years of proven B2B experience, specializing in account growth, complex negotiations, and building lasting client relationships across European markets.
+            </p>
+            <div class="mt-10 space-x-4">
+                <a href="#experience" class="bg-white text-[--color-primary] font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">My Journey</a>
+                <a href="#contact" class="border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-[--color-primary] transition duration-300">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-white shadow-inner">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        With extensive experience in **Business Development** and **Account Management** across key sectors like SaaS, technology, and security, I am a results-driven professional adept at transforming challenges into opportunities.
+                    </p>
+                    <p class="mb-4">
+                        My ability to **negotiate complex deals** and **build enduring relationships** with decision-makers at all levels (including C-suite) has been proven across diverse European markets.
+                    </p>
+                    <p>
+                        Passionate about innovation and possessing strong cultural adaptability, I seek to contribute to the success of a dynamic company by leveraging my bilingual expertise and analytical mindset.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <p class="text-6xl font-extrabold text-[--color-accent1]">€130K</p>
+                    <p class="text-xl text-gray-500 mt-2">Direct Revenue Generated from Outbound Prospecting</p>
+                    <p class="text-6xl font-extrabold text-[--color-accent2] mt-8">€2.3M+</p>
+                    <p class="text-xl text-gray-500 mt-2">Outbound Pipeline Generated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">My Experience</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+                A career path marked by growing responsibilities, international business development, and strategic client account management in demanding environments.
+            </p>
+            <div class="space-y-12">
+                <div class="timeline-item">
+                    <p class="text-sm text-gray-500 mb-1">February 2024 – Present</p>
+                    <h3 class="text-2xl font-bold text-[--color-primary]">Business Development & Lead Management</h3>
+                    <p class="font-semibold text-gray-600">Motorola Solutions | Lisbon, Portugal</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Implemented cold calling campaigns generating qualified leads in the security and safety solutions sector.</li>
+                        <li>Proactively qualified customer pre-sales inquiries, providing tailored advice on products and services.</li>
+                        <li>Built and managed a robust sales pipeline, generating over €2.3 million in outbound leads and €130,000 in direct revenue from outbound prospecting.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <p class="text-sm text-gray-500 mb-1">January 2022 – December 2023</p>
+                    <h3 class="text-2xl font-bold text-[--color-primary]">Business Development Representative EMEA</h3>
+                    <p class="font-semibold text-gray-600">Sidetrade | Dublin, Ireland</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Prospected enterprise clients across EMEA for a SaaS platform in the Order-to-Cash space.</li>
+                        <li>Engaged with C-level executives, qualified leads, and delivered tailored product demos.</li>
+                        <li>Consistently exceeded sales targets and built strategic partnerships.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <p class="text-sm text-gray-500 mb-1">September 2020 – December 2022</p>
+                    <h3 class="text-2xl font-bold text-[--color-primary]">Account Manager & French Market Support</h3>
+                    <p class="font-semibold text-gray-600">Nike | Dublin, Ireland</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Provided support to Nike France customers via chat, email, and social media, including managing the official Twitter account.</li>
+                        <li>Created response templates and upselling content to boost efficiency.</li>
+                        <li>Promoted to Expert Team and recognized for training and mentoring new team members.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <p class="text-sm text-gray-500 mb-1">September 2016 – August 2019</p>
+                    <h3 class="text-2xl font-bold text-[--color-primary]">Business Developer & Technical Sales Engineer</h3>
+                    <p class="font-semibold text-gray-600">ABB France | Toulouse, France</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+                        <li>Led B2B sales for home automation systems.</li>
+                        <li>Delivered Salesforce-based tools to improve team KPIs.</li>
+                        <li>Conducted trainings and created technical materials.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">My Skills</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+                A diverse set of skills, ranging from commercial strategy to technical expertise, encompassing client relationship management and interpersonal aptitudes.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[--color-accent1]">
+                    <h3 class="font-bold text-xl text-[--color-primary] mb-3">Commercial Strategy</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>B2B Sales Strategy & Execution</li>
+                        <li>Lead Generation & Pipeline Management</li>
+                        <li>Consultative Selling</li>
+                        <li>Prospecting & Client Acquisition</li>
+                        <li>Revenue Growth</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[--color-secondary]">
+                    <h3 class="font-bold text-xl text-[--color-primary] mb-3">Account Management</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Key Account Management & Retention</li>
+                        <li>Client Relationship Development</li>
+                        <li>Negotiation (C-suite)</li>
+                        <li>CRM (Salesforce, SAP)</li>
+                        <li>Post-Sales Support</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[--color-accent2]">
+                    <h3 class="font-bold text-xl text-[--color-primary] mb-3">Technical & Analytics</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Video Security (CCTV)</li>
+                        <li>Access Control</li>
+                        <li>Data Analysis & KPI Monitoring</li>
+                        <li>AI-Powered Security Solutions</li>
+                        <li>Process Optimization</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-gray-400">
+                    <h3 class="font-bold text-xl text-[--color-primary] mb-3">Interpersonal & Adaptability</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Communication & Negotiation</li>
+                        <li>Cross-Functional Collaboration</li>
+                        <li>Cultural Adaptability</li>
+                        <li>Training & Mentoring</li>
+                        <li>Global Mindset</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 flex flex-col items-center">
+                <h3 class="text-2xl font-bold text-center mb-6 gradient-text">Language Proficiency</h3>
+                <p class="text-center text-gray-500 mb-6 max-w-sm">An essential asset for operating and developing international markets, facilitating communication and intercultural understanding.</p>
+                <div class="chart-container">
+                    <canvas id="languageProficiencyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Key Projects & Contributions</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+                Strategic initiatives successfully executed, demonstrating a capacity to innovate and deliver concrete, measurable results impacting business operations.
+            </p>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[--color-primary]">Outbound Sales Cycle Optimization (Motorola Solutions)</h3>
+                    <p class="text-gray-700 mt-2">Redesigned cold calling scripts and methodologies, increasing conversion rate of calls to qualified meetings by [X]% in [Y] months.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[--color-primary]">Emerging Market Expansion (Sidetrade)</h3>
+                    <p class="text-gray-700 mt-2">Led entry into [X] new EMEA markets, resulting in a [Y]% increase in revenue generated from these territories.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[--color-primary]">Customer Support Efficiency Improvement (Nike)</h3>
+                    <p class="text-gray-700 mt-2">Launched template creation project, reducing query handling time by [X]% and increasing customer satisfaction by [Y] points.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-[--color-primary]">CRM Tool Implementation (ABB France)</h3>
+                    <p class="text-gray-700 mt-2">Integrated new Salesforce functionalities, enabling better performance visibility and saving [X] work hours per week for the sales team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Education</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+                A solid academic foundation in engineering and business, complementing the hands-on skills acquired through professional experience.
+            </p>
+            <div class="space-y-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[--color-accent1]">
+                    <h3 class="text-xl font-bold text-[--color-primary]">Bachelor's Degree in Technical Sales</h3>
+                    <p class="font-semibold text-gray-600">University of Toulouse | 2017</p>
+                    <p class="text-gray-700 mt-2">Final project: [Project Name if notable], focused on [relevant detail].</p>
+                    <p class="text-700 mt-2">[Mention academic honors if applicable, e.g., Graduated with Honors, Dean's List, etc.]</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[--color-secondary]">
+                    <h3 class="text-xl font-bold text-[--color-primary]">Higher National Diploma (HND) in Electrical Engineering</h3>
+                    <p class="font-semibold text-gray-600">Jean-Dupuy High School, Tarbes | 2014 – 2016</p>
+                    <p class="text-gray-700 mt-2">[Mention a significant technical project, e.g., Designed an automation system for X].</p>
+                    <p class="text-gray-700 mt-2">[Mention any distinctions or rankings if applicable].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 gradient-bg text-white text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-4xl font-bold mb-8">Let's Discuss Your Next Opportunity</h2>
+            <p class="text-lg mb-8">I am always open to new challenges and enriching collaborations.</p>
+            <div class="flex flex-col space-y-4">
+                <p class="text-2xl font-semibold"><a href="tel:+33646780123" class="hover:underline">+33 646780123</a></p>
+                <p class="text-2xl font-semibold"><a href="mailto:feuillerat.gavin2015@outlook.fr" class="hover:underline">feuillerat.gavin2015@outlook.fr</a></p>
+                <p class="text-2xl font-semibold"><a href="[Your LinkedIn Profile Link]" target="_blank" class="hover:underline">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[--color-primary] text-gray-300 py-6 text-center text-sm">
+        <p>&copy; 2025 Gavin Feuillerat. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        // Language Chart (Horizontal Bar)
+        const languageCtx = document.getElementById('languageProficiencyChart').getContext('2d');
+        const languageChart = new Chart(languageCtx, {
+            type: 'bar',
+            data: {
+                labels: ['French', 'English', 'Portuguese', 'Spanish'],
+                datasets: [{
+                    label: 'Proficiency Level (out of 5)',
+                    data: [5, 4.5, 3.5, 3], // 5=Native, 4=Fluent, 3=Intermediate
+                    backgroundColor: [
+                        '#003f5c',
+                        '#665191',
+                        '#ff7c43',
+                        '#ffa600',
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 5,
+                        ticks: {
+                            stepSize: 1,
+                            font: { family: 'Inter' }
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            font: { family: 'Inter' }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                }
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
